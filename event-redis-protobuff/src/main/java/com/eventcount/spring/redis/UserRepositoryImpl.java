@@ -1,27 +1,19 @@
 package com.eventcount.spring.redis;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.concurrent.TimeUnit;
 
-import javax.annotation.PostConstruct;
-
+import com.eventcount.spring.redis.User.UserGroup;
+import com.eventcount.spring.redis.serializer.ProtobufSerializer;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.eventcount.spring.redis.User.UserGroup;
-import com.eventcount.spring.redis.serializer.ProtobufSerializer;
+import javax.annotation.PostConstruct;
+import java.nio.charset.Charset;
+import java.util.concurrent.TimeUnit;
 
 @Component
 public class UserRepositoryImpl implements UserRepository {
