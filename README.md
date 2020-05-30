@@ -25,17 +25,17 @@ Microservice patterns:
 
 Technologies that we  will see in this system:
 
-*Spring Boot,
-*Spring Data, Spring Cloud Eureka, Load Balancing with Ribbon, 
-*Declarative REST Clients with Feign, Software Circuit Breakers with Hystrix, 
-*Administrating using Spring admin,Log management with Elastic search, Logstash and Kibana (ELK), 
-*Server load balancing with Nginx,
-*Infrastructure management with Docker-compose, JMX application monitoring,
-*Security with Spring Security OAuth, Oauth2 with JWT, Aspect Oriented Programing, 
-*Distributed events with Kafka, Spring Stream Maven Multimodule project, Event Sourcing, 
-*CQRS, REST, Web Sockets, Continuous deploy with Jenkins, and all developed using Java 8.
+* Spring Boot,
+* Spring Data, Spring Cloud Eureka, Load Balancing with Ribbon, 
+* Declarative REST Clients with Feign, Software Circuit Breakers with Hystrix, 
+* Administrating using Spring admin,Log management with Elastic search, Logstash and Kibana (ELK), 
+* Server load balancing with Nginx,
+* Infrastructure management with Docker-compose, JMX application monitoring,
+* Security with Spring Security OAuth, Oauth2 with JWT, Aspect Oriented Programing, 
+* Distributed events with Kafka, Spring Stream Maven Multimodule project, Event Sourcing, 
+* CQRS, REST, Web Sockets, Continuous deploy with Jenkins, and all developed using Java 8.
 
-![Alt text](assets/microservices-arch.jpg?raw=true "microservices architecture")
+![Alt text](assets/microservices-arch.png?raw=true "microservices architecture")
 
 
 ## How to use
@@ -45,7 +45,6 @@ Technologies that we  will see in this system:
 * `docker-compose -p todo up` 
 
 ## Continuous deploy using Jenkins Pipeline
-We have created a docker image in order to have continuous deploy in our project [here](https://github.com/varadharajaan/build-deploy).
 
 This image will contain all necessary to build our project, create the Docker images and 
 deploy on AWS using ECS containers. 
